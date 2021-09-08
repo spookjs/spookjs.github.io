@@ -2,6 +2,16 @@
 <html lang="en">
 
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-NN9P1066KJ"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-NN9P1066KJ');
+		</script>
+
 		<script>
 			function copy_to_clipboard() {
 				/* Get the text field */
@@ -84,7 +94,7 @@
 
 					<div class="row" style="padding-top: 10px; text-align: center;">
 						<div class="col-xs-12 button-wrapper">
-							<a href="files/spook-js.pdf" class="btn btn-primary mr-2" style="margin-right: 10px;"><i
+							<a href="files/spook-js.pdf" target="_blank" class="btn btn-primary mr-2" style="margin-right: 10px;"><i
 									class="fa fa-download" style="padding-right: 10px;"></i>Download the Paper (PDF)</a>
 							<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#cite-spookjs"><i
 									class="fa fa-quote-left" style="padding-right: 10px;"></i> Cite (BibTeX)</a>
@@ -134,36 +144,40 @@
 						login page by Chrome's built-in credential manager. We show that our blog can be rendered by the
 						same Chrome process as the login page, and that Spook.js can consequently recover the password.
 					</p>
-					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PHrzrSIfauw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bP9Hquj5PH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-					<h5 class="green">Attacking LastPass with a Malicious Chrome Extension</h5>
+					<h5 class="green" style="margin-top: 20px;">Attacking LastPass with a Malicious Chrome Extension</h5>
 
-					<p>TODO: screen capture another demo. Crop the probabilistic parts, as well as where we enable and
-						disable extensions randomly and manually to achieve process consolidation of our malicious
-						extension with LastPass's background script.</p>
+					<p>
+						This time, we packaged Spook.js as a Chrome extension. We show that under certain conditions,
+					   	multiple extensions may be consolidated and executed from the same process. We take advantage
+					   	of this behavior to read the memory of the LastPass credential manager extension, and recover
+						the master password of the target's vault.
+					</p>
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yz_s4k1zGwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</section>
 
 			<section id="people">
-				<h4><i class="fa fa-users" style="padding-right: 10px;"></i>Who are the people behind Spook.js?</h4>
-				<!-- TODO Jason: add hrefs to personal websites -->
+				<h4 style="padding-top: 20px;"><i class="fa fa-users" style="padding-right: 10px;"></i>Who are the people behind Spook.js?</h4>
 				<div class="container">
 					<ul>
-						<li>Ayush Agarwal <span class="badge badge-michigan"><a class="univ"
+                        <li><a href="https://www.linkedin.com/in/agarwalayush9">Ayush Agarwal</a> <span class="badge badge-michigan"><a class="univ"
 									href="https://umich.edu/">University of Michigan</a></span></li>
 						<li>Sioli O'Connell <span class="badge badge-adelaide"><a class="univ"
 									href="https://www.adelaide.edu.au/">University of Adelaide</a></span></li>
-						<li>Jason Kim <span class="badge badge-gatech"><a class="univ"
+						<li><a href="https://jasonkim.page/">Jason Kim </a><span class="badge badge-gatech"><a class="univ"
 									href="https://www.gatech.edu/">Georgia Institute of Technology</a></span></li>
 						<li>Shaked Yehezkel <span class="badge badge-tau"><a class="univ"
 									href="https://english.tau.ac.il/">Tel Aviv University</a></span></li>
-						<li>Daniel Genkin <span class="badge badge-gatech"><a class="univ"
+						<li><a href="https://www.cc.gatech.edu/~genkin/">Daniel Genkin</a> <span class="badge badge-gatech"><a class="univ"
 									href="https://www.gatech.edu/">Georgia Institute of Technology</a></span></li>
-						<li>Eyal Ronen <span class="badge badge-tau"><a class="univ"
+						<li><a href="https://eyalro.net/">Eyal Ronen</a> <span class="badge badge-tau"><a class="univ"
 									href="https://english.tau.ac.il/">Tel Aviv University</a></span></li>
 						<li><a href="https://cs.adelaide.edu.au/~yval">Yuval Yarom</a> <span class="badge badge-adelaide"><a class="univ"
 									href="https://www.adelaide.edu.au/">University of Adelaide</a></span></li>
 					</ul>
+					<p style="text-align: center;"><b>Contact us at <a href="mailto:info@spookjs.com">info@spookjs.com</a></b></p>
 					<br>
 
 					<div class="row align-items-center" style="margin-top: -20px; margin-bottom: -20px;">
@@ -190,7 +204,7 @@
 			</section>
 
 			<section id="qa">
-				<h4><i class="fa fa-question-circle" style="padding-right: 10px;"></i>More Questions and Answers</h4>
+				<h4 style="padding-top: 20px;"><i class="fa fa-question-circle" style="padding-right: 10px;"></i>More Questions and Answers</h4>
 
 				<div class="container">
 					<h5 class="green">Impact and Potential Concerns</h5>
@@ -474,6 +488,39 @@
 						</div>
 					</div>
 					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingeTLD">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseeTLD" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseeTLD">
+								What is eTLD+1?
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseeTLD" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingeTLD">
+							<div class="accordion-body">
+								<p>
+									eTLD+1 is an acronym for effective top-level domain plus one. A top-level domain
+									(TLD) is the part of a domain name without dots, such as "com", "org", or "edu".
+									Users can register domain names under a TLD, like "example.com".
+									On the other hand, an effective top-level domain (eTLD) contains dots and is
+									therefore not a true TLD, but is the part of a domain name under which subdomains
+									can be registered directly. An example is "edu.au", with "adelaide.edu.au" registered under it.
+								</p>
+								<p>
+									The +1 refers to the term that comes just before the TLD or eTLD, delimited
+									by a dot. That is, for "example.com" it is "example", and for "adelaide.edu.au" it
+									is "adelaide". If two websites share a TLD or eTLD as well as the term preceding it,
+									Chrome might consolidate them into the same process, despite Strict Site Isolation.
+									Thus, Chrome will separate "example.com" and "example.net" due to different TLDs, and also
+									"example.com" and "attacker.com" because the +1 terms (preceding the TLD) are different.
+									However, "attacker.example.com" and "corporate.example.com" are allowed to share the same
+									process due to their common eTLD+1 of "example.com". This allows pages hosted under "attacker.example.com"
+									to potentially extract information from pages under "corporate.example.com".
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
 						<h2 class="accordion-header" id="panelsStayOpen-headingSpectre">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 								data-bs-target="#panelsStayOpen-collapseSpectreAttack" aria-expanded="false"
@@ -487,8 +534,8 @@
 							<div class="accordion-body">
 								<p>
 									Spectre is fundamentally a hardware vulnerability where footprints of speculative
-									execution are not cleaned up completely within the processor's state. Thus, strict site
-									isolation cannot fix Spectre. Instead, Strict Site Isolation attempts to limit
+									execution are not cleaned up completely within the processor's state. Thus, Strict Site
+									Isolation cannot fix Spectre. Instead, Strict Site Isolation attempts to limit
 									information leakage by separating
 									the contents of different websites into different processes.
 								</p>
@@ -607,11 +654,15 @@
 								</p>
 								<p>
 									Finally, as a response to our work, Google introduced <a
-										href="https://www.chromestory.com/2021/05/strict-extension-isolation/">
+										href="https://security.googleblog.com/2021/07/protecting-more-with-site-isolation.html">
 										Strict Extension Isolation</a>, a feature which
 									prevents multiple extensions from being consolidated into the same process under memory
 									pressure. This stops Spook.js (packaged as a malicious extension) from reading the
-									memory of other extensions.
+									memory of other extensions. Strict Extension Isolation will be enabled incrementally
+									for users of Chrome versions 92 through 95, and by default starting with version 95.
+									We also link a <a href="https://blog.chromium.org/2021/03/mitigating-side-channel-attacks.html">
+									blog post</a> by Google's Chromium Project on tips for web developers to defend their sites
+									against side channel attacks.
 								</p>
 							</div>
 						</div>
@@ -640,21 +691,6 @@
 				</div>
 				<div class="accordion accordion-flush" id="miscellaneous" style="padding-top: 10px;">
 					<div class="accordion-item">
-						<h2 class="accordion-header" id="panelsStayOpen-headingPoC">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-								data-bs-target="#panelsStayOpen-collapsePoC" aria-expanded="false"
-								aria-controls="panelsStayOpen-collapsePoC">
-								Is there a proof-of-concept?
-							</button>
-						</h2>
-						<div id="panelsStayOpen-collapsePoC" class="accordion-collapse collapse"
-							aria-labelledby="panelsStayOpen-headingPoC">
-							<div class="accordion-body">
-								<p>Yes, please see our GitHub <a href="https://github.com/spookjs/spookjs-poc">repository</a>.</p>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item">
 						<h2 class="accordion-header" id="panelsStayOpen-headingWhyattack">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 								data-bs-target="#panelsStayOpen-collapseWhyattack" aria-expanded="false"
@@ -669,10 +705,8 @@
 								a widely used website and Chrome extension respectively, and are likely to contain
 								sensitive information. As a disclaimer, we clarify that Spook.js exploits weaknesses in
 								the Strict Site Isolation mechanism of the Chrome browser, and does not rely on
-								vulnerabilities in either service. However, we note that our attack on Tumblr was made
-								possible due to the absence of tumblr.com from the <a
-									href="https://publicsuffix.org/">Public Suffix List</a>. (See 'What countermeasures
-								are available?' above for more details.)
+								vulnerabilities in either service. In particular, we do not discourage users from using
+								these services.
 							</div>
 						</div>
 					</div>
@@ -688,14 +722,17 @@
 							aria-labelledby="panelsStayOpen-headingLogo">
 							<div class="accordion-body">
 								<p>
-									Yes, you can use the logo freely; we have waived its rights through the <a
-										href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 Creative Commons
-										License</a>. Logo designed by Jason Kim (who had to teach himself a bit of
-									digital illustration just for this logo!)
+									Our Spook.js logo contains the logo of the Chromium project, which is
+									published under the
+									<a href="https://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Generic</a>
+									(CC BY 2.5) license. We acknowledge that the Chromium logo belongs to
+									the Chromium project, maintained by Google. While we have not modified the
+									Chromium logo itself, we include it as a component of the Spook.js logo.
 								</p>
 								<p>
-									<strong>TODO: check if the logo is free to distribute, because it contains the
-										Chrome logo.</strong>
+									Accordingly, we release our logo under the same license. You can modify, redistribute, and copy it
+									freely. Logo (excluding the Chromium logo component) designed by Jason Kim (who had to teach himself a bit of
+									digital illustration just for it!)
 								</p>
 							</div>
 						</div>
@@ -703,21 +740,29 @@
 				</div>
 
 			</section>
-			<section id="acknowledgements">
-				<h4><i class="fa fa-comments" style="padding-right: 10px;"></i>Acknowledgements</h4>
-				<!-- TODO Jason: update with acks from end of Spook.js paper -->
+			<section id="acknowledgments">
+				<h4><i class="fa fa-comments" style="padding-right: 10px;"></i>Acknowledgments</h4>
 				<div class="block">
 					<p>
-						TODO
+						This work was supported by
+						the Air Force Office of Scientific Research (AFOSR) under award number FA9550-20-1-0425;
+						an ARC Discovery Early Career Researcher Award (project number DE200101577);
+						an ARC Discovery Project (project number DP210102670);
+						the Defense Advanced Research Projects Agency (DARPA) and
+						Air Force Research Laboratory (AFRL) under contracts FA8750-19-C-0531 and HR001120C0087;
+						Israel Science Foundation grants 702/16 and 703/16;
+						the National Science Foundation under grant CNS-1954712;
+						Len Blavatnik and the Blavatnik Family foundation and Blavatnik ICRC at Tel-Aviv University;
+						Robert Bosch Foundation;
+						and gifts from Intel and AMD.
 					</p>
 				</div>
 			</section>
 		</div>
 
 		<footer>
-			<!-- TODO Jason: update copyright footer -->
 			<div class="text-center w-100">
-				<span>Copyright &copy;TODO. All rights reserved.</span>
+				<span>Copyright &copy; Georgia Institute of Technology. All rights reserved.</span>
 			</div>
 		</footer>
 

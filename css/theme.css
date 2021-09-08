@@ -185,14 +185,19 @@ li {
 	background-color: #000000;
 }
 
-.badge-data61 {
-	background-color: #3eb489;
-}
-
 .univ {
 	color: #ffffff;
 }
 
 .univ:hover {
 	color: #ffffff;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+}
+
+.accordion-body {
+	margin-left: 30px;
 }

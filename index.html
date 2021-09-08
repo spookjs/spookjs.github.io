@@ -261,12 +261,12 @@
 								In our evaluation, we have demonstrated leakage of the following information:
 
 								<ul>
-									<li>The list of tabs which a user currently has open</li>
+									<li>The list of same-site tabs which a user currently has open</li>
 									<li>Phone numbers, addresses, and bank account information displayed on a website
 									</li>
 									<li>Usernames, passwords, and credit card numbers autofilled by credential managers
 									</li>
-									<li>Images in Google Photos which a user is currently viewing</li>
+									<li>Under certain circumstances, images in Google Photos which a user is currently viewing</li>
 									<li>Information sensitive to an individual Chrome extension, such as its login
 										information</li>
 								</ul>
@@ -317,11 +317,11 @@
 							aria-labelledby="panelsStayOpen-headingStopExtension">
 							<div class="accordion-body">
 								<p>
-									No, you can continue using Chrome extensions. While we do show that Chrome's
-									extension isolation is not perfect, Spook.js is still relatively hard to mount and
-									requires substantial side channel expertise. Moreover, in response to our work,
-									Google is rolling out changes to how extensions are laid out in memory, which will
-									further mitigate them from being affected by Spook.js. See the 'What countermeasures are
+									No, you can continue using Chrome extensions. While we found that Chrome's
+									extension isolation was not perfect initially, Spook.js was still relatively hard to mount and
+									required substantial side channel expertise. Moreover, in response to our work,
+									Google has deployed changes to how extensions are laid out in memory, which
+									prevents them from being affected by Spook.js. See the 'What countermeasures are
 									available?' question for more information.
 								</p>
 							</div>
@@ -580,7 +580,7 @@
 									from browser-based speculative execution attacks. More specifically, we show that
 									Chrome's Strict Site Isolation implementation consolidates webpages based on their
 									eTLD+1 domain, allowing an attacker-controlled page to extract sensitive information
-									from pages on other domains. Next, we also show how to bypass
+									from pages on other subdomains. Next, we also show how to bypass
 									Chrome's 32-bit sandboxing mechanism. We achieve this by using a type confusion
 									attack, which temporarily forces Chrome's JavaScript execution engine to operate on
 									an object of the wrong type. Using this method we can combine multiple 32-bit values
@@ -658,8 +658,7 @@
 										Strict Extension Isolation</a>, a feature which
 									prevents multiple extensions from being consolidated into the same process under memory
 									pressure. This stops Spook.js (packaged as a malicious extension) from reading the
-									memory of other extensions. Strict Extension Isolation will be enabled incrementally
-									for users of Chrome versions 92 through 95, and by default starting with version 95.
+									memory of other extensions. Strict Extension Isolation is enabled as of Chrome versions 92 and up.
 									We also link a <a href="https://blog.chromium.org/2021/03/mitigating-side-channel-attacks.html">
 									blog post</a> by Google's Chromium Project on tips for web developers to defend their sites
 									against side channel attacks.

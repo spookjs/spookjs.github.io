@@ -472,12 +472,12 @@
 								<p>
 									Operating systems such as Windows, Linux, and macOS currently isolate different
 									programs into different units of execution called processes. The CPU then enforces
-									this isolation at the hardware level, preveting one process from accessing the
+									this isolation at the hardware level, preventing one process from accessing the
 									contents of other processes.
 								</p>
 								<p>
 									Strict Site Isolation is a recent browser architecture aimed at increasing browser
-									security. Rather then arbitrarily assign different websites into different
+									security. Rather than arbitrarily assign different websites into different
 									processes, browsers with Strict Site Isolation enabled ensure that content from
 									different websites will be located in different processes. For example, data
 									pertaining to google.com will never share the same process as the data for
@@ -569,7 +569,7 @@
 								<p>
 									Since Spectre's original introduction in 2018, browser vendors have deployed many
 									countermeasures in order to make Spectre harder to exploit. In addition to Strict
-									Site Isolation, which prevets different webpages from sharing the same process,
+									Site Isolation, which prevents different webpages from sharing the same process,
 									Chrome also partitions the address space of each process into different 32-bit
 									sandboxes (despite being a 64-bit application). Limiting all values to be 32-bit
 									prevents a Spectre attacker from crossing partition boundaries, thus further
@@ -613,7 +613,7 @@
 								<p>
 									Other browsers like Firefox and Safari use very different JavaScript execution
 									engines, which currently stops Spook.js from working. We leave the task of
-									investigating speculative exection attacks on these browsers to future work.
+									investigating speculative execution attacks on these browsers to future work.
 									Finally, Firefox has <a
 										href="https://blog.mozilla.org/security/2021/05/18/introducing-site-isolation-in-firefox/">recently
 										introduced</a> Strict Site Isolation in its stable release. While Spook.js does
